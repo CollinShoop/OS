@@ -1,0 +1,61 @@
+ _____                     _____ _       _ _ 
+|   __|_ _ ___ ___ ___ ___|   __| |_ ___| | |
+|__   | | | . | -_|  _|___|__   |   | -_| | |
+|_____|___|  _|___|_|     |_____|_|_|___|_|_|
+          |_|                            v2  
+Welcome to Super-Shell by Collin Shoop!
+
+ > ls -l
+total 55
+-rwxr-xr-x 0 cws55854 root 14574 Oct 24 12:05 a.out
+drwxr-xr-x 0 cws55854 root     0 Oct 24 09:08 build
+-rwxr-xr-x 0 cws55854 root    24 Oct 24 12:18 count.txt
+-rwxr-xr-x 0 cws55854 root   354 Oct 24 11:04 define.txt
+drwxr-xr-x 0 cws55854 root     0 Oct 24 09:08 dist
+-rwxr-xr-x 0 cws55854 root  3482 Oct 21 09:25 Makefile
+drwxr-xr-x 0 cws55854 root     0 Oct 24 09:08 nbproject
+-rwxr-xr-x 0 cws55854 root    14 Oct 22 11:40 output
+-rwxr-xr-x 0 cws55854 root 13749 Oct 24 12:32 shell.c
+-rwxr-xr-x 0 cws55854 root  6496 Oct 21 10:28 shell.o
+-rwxr-xr-x 0 cws55854 root  3113 Oct 24 10:40 shell_old.c
+-rwxr-xr-x 0 cws55854 root   832 Oct 24 11:02 testls.txt
+-rwxr-xr-x 0 cws55854 root    18 Oct 22 11:24 test.out
+-rwxr-xr-x 0 cws55854 root   354 Oct 23 14:30 testout.txt
+-rwxr-xr-x 0 cws55854 root     0 Oct 23 14:04 test.txt
+
+ > grep define shell.c > define.txt
+
+ > cat define.txt
+#define MAX_LEN 300 // Arbitrary maximum length of a single shell command. Can be changed.
+#define MAX_ARGS 10 // Arbitrary maximum argument count accepted. Can be changed.
+#define MAX_WD 300 // Arbitrary maximum string length for 'pwd' result. Can be changed.
+#define MAX_INTMESSAGE_LEN 100 // used in signal_handler(int) as the max message length.
+#define PROMPT " > "
+
+ > grep define shell.c | wc > count.txt
+
+ > cat count.txt
+      5      58     376
+
+ > ls -l | wc -c
+832
+
+ > grep MAX_LEN < define.txt > max_len.txt
+
+ > cat max_len.txt
+#define MAX_LEN 300 // Arbitrary maximum length of a single shell command. Can be changed.
+
+ > ls -l | grep rwx | grep 24 | wc -c > superPipingExample.txt
+
+ > cat superPipingExample.txt
+730
+
+ > ^Z
+Suspending Super-Shell at 05:00:06 PM on October 24, 2014.
+[1]+  Stopped(SIGSTOP)        ./a.out
+sh-4.2$ fg
+./a.out
+
+ > ^C
+Terminating Super-Shell at 05:04:12 PM on October 24, 2014.
+sh-4.2$ 
