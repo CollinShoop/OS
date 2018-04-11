@@ -4,4 +4,4 @@ Assignments from my undergrad Operating Systems course taken in 2014 at Bloomsbu
 
 The first assignment is a linux shell written in C.
 
-The second one features a use of hill-climing optimization. 
+The second one is a "traveling sales man" problem using hill-climbing optimization. 
